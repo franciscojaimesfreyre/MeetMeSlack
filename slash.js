@@ -14,7 +14,7 @@ async function handleInitialRequest(req) {
                 text: roomLink,
                 attachment_type: 'default',
                 callback_id: shuffleCallbackId,
-                actions: [getAction('Send', 'primary', image), getAction('Reshuffle'), getAction('Cancel', 'danger')]
+                actions: [getAction('Send', 'primary', roomLink), getAction('Reshuffle'), getAction('Cancel', 'danger')]
             }
         ]
     };
