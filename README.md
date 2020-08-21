@@ -5,9 +5,9 @@ Slack integration with InspiroBot.me
 ## Key Features:
 - Post a random room from [Jitsi meet](https://meet.jit.si/) to any given Slack channel in your workspace.
 - Before posting to a slack channel, *only the person who invoked it* can:
-    - Shuffle for another image, if the current image does not suit your taste.
-    - Cancel sending the image to the channel.
-    - Send the current image to the channel for everyone to see.
+    - Shuffle for another room link.
+    - Cancel sending the room link to the channel.
+    - Send the current room link to the channel for everyone to use it.
 
 ## Local development
 Use ngrok (https://api.slack.com/tutorials/tunneling-with-ngrok) to test commands locally.
