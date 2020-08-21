@@ -1,7 +1,7 @@
 {
-  "name": "inspirome-slack",
+  "name": "meetmeslack",
   "version": "1.0.0",
-  "description": "Slack integration with InspiroBot.me",
+  "description": "Slack integration with Jitsi Meet",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/apalanki/InspiroMeSlack.git"
+    "url": "git+https://github.com/franciscojaimesfreyre/MeetMeSlack.git"
   },
   "author": "Anudeep Palanki",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/apalanki/InspiroMeSlack/issues"
+    "url": "https://github.com/franciscojaimesfreyre/MeetMeSlack"
   },
-  "homepage": "https://github.com/apalanki/InspiroMeSlack#readme",
+  "homepage": "https://github.com/franciscojaimesfreyre/MeetMeSlack",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",

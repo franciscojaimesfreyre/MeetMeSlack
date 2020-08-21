@@ -1,19 +1,17 @@
-const {getNewInspiration, postSlackResponse} = require('./integrations');
+const {getNewRoomLink, postSlackResponse} = require('./integrations');
 const {getAction, getUserId, shuffleCallbackId} = require('./slackUtils');
 
 async function handleInitialRequest(req) {
-    const inspireImage = await getNewInspiration();
-    const image = inspireImage || 'http://inspirobot.me/website/images/inspirobot-dark-green.png';
+    const roomLink = getNewRoomLink();
 
     const body = req.body || req;
     const botPayload = {
         channel: body.channel_id,
-        text: getUserId(body) + 'Select a inspirational quote to *Send*',
+        text: getUserId(body) + 'Select a room link to *Send*',
         mrkdwn: true,
         attachments: [
             {
-                text: image,
-                image_url: image,
+                text: roomLink,
                 attachment_type: 'default',
                 callback_id: shuffleCallbackId,
                 actions: [getAction('Send', 'primary', image), getAction('Reshuffle'), getAction('Cancel', 'danger')]
@@ -25,17 +23,16 @@ async function handleInitialRequest(req) {
 }
 
 function handleSendRequest(payload) {
-    const image = payload.actions[0].value;
+    const roomLink = payload.actions[0].value;
     const botPayload = {
         response_type: 'in_channel',
         channel: payload.channel_id,
         replace_original: false,
         delete_original: true,
-        text: getUserId(payload) + 'via /inspire',
+        text: getUserId(payload) + 'using /meetme',
         attachments: [
             {
-                text: image,
-                image_url: image
+                text: roomLink,
             }
         ]
     };

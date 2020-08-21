@@ -1,6 +1,6 @@
 'use strict';
 
-const shuffleCallbackId = 'inspirobot_shuffle';
+const shuffleCallbackId = 'meetme_shuffle';
 
 const getUserId = (body) => '<@' + (body.user_id || body.user.id) + '>: ';
 

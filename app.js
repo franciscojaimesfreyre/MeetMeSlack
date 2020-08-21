@@ -8,11 +8,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // test route
 app.get('/', function(req, res) {
-    res.status(200).send('Ready to Inspire!');
+    res.status(200).send('Ready!');
 });
 
 app.listen(port, function() {
-    console.log('InspiroBot listening on port ' + port);
+    console.log('MeetMeSlack listening on port ' + port);
 });
 
 app.post('/slash', require('./slash'));
