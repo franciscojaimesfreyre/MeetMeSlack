@@ -1,6 +1,6 @@
 
 # MeetMeSlack
-Slack integration with InspiroBot.me
+Slack integration with Jitsi Meet
 
 ## Key Features:
 - Post a random room from [Jitsi meet](https://meet.jit.si/) to any given Slack channel in your workspace.
